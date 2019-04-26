@@ -1,0 +1,19 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8080/eureka/ #\u914D\u7F6Eeureka\u670D\u52A1\u5668\u5730\u5740
+server:
+  port: 8081 #\u914D\u7F6Eeurekaclient\u7684\u670D\u52A1\u7AEF\u53E3
+spring:
+  application:
+    name: service-client #\u914D\u7F6Eeurekaclient\u7684\u670D\u52A1\u540D\u79F0
+
+management: #actuator
+  server:
+    port: 8081
+  endpoints:
+    web:
+      base-path: /    #\u9ED8\u8BA4\u8DEF\u5F84\u662F/actuator
+      exposure:
+        include: refresh,health,info
+#       include: "*"    # \u201C*\u201D\u6253\u5F00\u5168\u90E8\u8BF7\u6C42\u7AD9\u70B9
