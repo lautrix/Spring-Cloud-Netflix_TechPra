@@ -6,7 +6,12 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloController {
     @RequestMapping("/")
-    public String HelloEureka(){
-        return "Hello Eureka!";
+    public String HelloEureka() {
+        return "Hello eureka client 2!";
+    }
+
+    @RequestMapping("/config")
+    public String getConfigValue() {
+        return "Eureka client 2 do not have config files! Please retry.";
     }
 }

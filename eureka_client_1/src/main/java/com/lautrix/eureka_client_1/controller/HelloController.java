@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloController {
     @RequestMapping("/")
     public String HelloEureka() {
-        return "Hello Eureka!";
+        return "Hello eureka client 1!";
     }
 
     @Value("${iname}")
