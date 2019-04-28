@@ -23,5 +23,23 @@
 
 #####	Netflix服务架构示意图
 
-![avatar](https://github.com/lautrix/Spring-Cloud-Netflix_TechPra/blob/master/ConfigFiles/spring-cloud%20netflix%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg)
+![服务架构示意图](https://github.com/lautrix/Spring-Cloud-Netflix_TechPra/blob/master/ConfigFiles/spring-cloud%20netflix%E6%9C%8D%E5%8A%A1%E6%9E%B6%E6%9E%84%E7%A4%BA%E6%84%8F%E5%9B%BE.jpg)
+
+#####	服务架构简要说明
+
+- eureka_server（127.0.0.1:8080）：
+
+  架构整体的服务注册中心。在架构中作为服务注册中心，提供服务注册功能。
+
+- config_server（127.0.0.1:8090）：
+
+  配置中心。线上保存项目配置文件，供子服务远程下载、同步服务配置。本例中在公共仓库中上传的配置文件为示例文件。实际项目中应在私有仓库或自行搭建如GitLab等仓库作为配置中心，以免信息泄露。
+
+- 
+
+- 
+
+- 
+
+  
 
