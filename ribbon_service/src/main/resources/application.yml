@@ -7,3 +7,10 @@ server:
 spring:
   application:
     name: service-ribbon
+management:
+  security: false
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream
+      base-path: /
