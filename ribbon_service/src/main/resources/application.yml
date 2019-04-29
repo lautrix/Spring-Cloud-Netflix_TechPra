@@ -1,16 +1,19 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8080/eureka/ #\u914D\u7F6Eeureka\u670D\u52A1\u5668\u5730\u5740
+      defaultZone: http://localhost:8080/eureka/ #指定eureka注册中心
+
 server:
-  port: 8091
+  port: 8091 #当前服务端口号
+
 spring:
   application:
-    name: service-ribbon
+    name: service-ribbon #服务名，在eureka注册中心以大写形式展示
+
 management:
   security: false
   endpoints:
     web:
       exposure:
-        include: hystrix.stream
+        include: hystrix.stream #开启hystrix.stream访问权限
       base-path: /

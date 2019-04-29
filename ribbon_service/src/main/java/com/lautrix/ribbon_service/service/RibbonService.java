@@ -7,8 +7,9 @@ import org.springframework.web.client.RestTemplate;
 
 @Service
 public class RibbonService {
+
     @Autowired
-    RestTemplate restTemplate;
+    private RestTemplate restTemplate;
 
     @HystrixCommand(fallbackMethod = "callFailure")
     public String getRibbonContent(){
