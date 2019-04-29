@@ -32,7 +32,7 @@ public class RibbonServiceApplication {
   }
 
   /**
-   * IRule: Ribbon核心组件，负载均衡策略。内置策略如下： RoundRobinRule:轮询 AvailabilityFilteringRule:
+   * IRule: Ribbon核心组件，负载均衡策略。内置策略如下： RoundRobinRule:轮询; AvailabilityFilteringRule:
    * 会先过滤掉由于多次访问故障而处于断路器跳闸状态的服务,以及并发的连接数量，超过阈值的服务,然后对剩余的服务列表按照轮询策略进行访问; WeightedResponseTimeRule:
    * 根据平均响应时间计算所有服务的权重,响应时间越快,服务权重越大,被选中的机率越高（刚启动时,如果统计信息不足,则使用RoundRobinRule策略,等统计信息足够时,会切换到WeightedResponseTimeRule）;
    * RetryRule: 先按照RoundRobinRule的策略获取服务,如果获取服务失败,则在指定时间内会进行重试,获取可用的服务; BestAvailableRule:
@@ -40,7 +40,7 @@ public class RibbonServiceApplication {
    */
   @Bean
   public IRule iRule() {
-    System.out.println("RibbonServiceApplication.class");
+//    System.out.println("RibbonServiceApplication.class");
     return new RandomRule();
   }
 
