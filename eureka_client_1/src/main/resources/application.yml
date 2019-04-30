@@ -1,7 +1,9 @@
 eureka:
+#  instance:
+#    prefer-ip-address: true
   client:
     serviceUrl:
-      defaultZone: http://localhost:8080/eureka/ # 注册Eureka
+      defaultZone: http://eureka-server-1:8080/eureka/, http：//eureka-server-2:8083/eureka # 注册Eureka
 server:
   port: 8081 # 服务端口号
 spring:
