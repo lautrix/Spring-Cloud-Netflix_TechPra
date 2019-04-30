@@ -9,15 +9,15 @@
 
 #####	工程说明
 
-|     工程名      |               工程内容说明                | 端口号 |
-| :-------------: | :---------------------------------------: | ------ |
-|  eureka_server  |               服务注册中心                | 8080   |
-| eureka_client_1 |               模拟业务模块1               | 8081   |
-| eureka_client_2 |               模拟业务模块2               | 8082   |
-|  config_server  |               配置文件中心                | 8090   |
-|  feign_service  |                 负载均衡                  | 8091   |
-| ribbon_service  | 负载均衡（与feign功能相同，实现方式不同） | 8092   |
-|  zuul_service   |                   网关                    | 8093   |
+|     工程名      |  工程内容说明  | 端口号 |
+| :-------------: | :------------: | ------ |
+|  eureka_server  |  服务注册中心  | 8080   |
+| eureka_client_1 | 模拟业务模块1  | 8081   |
+| eureka_client_2 | 模拟业务模块2  | 8082   |
+|  config_server  |  配置文件中心  | 8090   |
+|  feign_service  | 服务间相互访问 | 8091   |
+| ribbon_service  |    负载均衡    | 8092   |
+|  zuul_service   |      网关      | 8093   |
 
 
 
