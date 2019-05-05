@@ -18,6 +18,6 @@ public class HelloController {
 
     @RequestMapping("/config")
     public String config() {
-        return name;
+        return "eureka client 1:"+name;
     }
 }

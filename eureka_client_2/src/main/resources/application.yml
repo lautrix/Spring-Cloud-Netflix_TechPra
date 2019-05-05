@@ -1,9 +1,19 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8080/eureka/ # eureka客户端
+      defaultZone: http://eureka-server-1:8080/eureka/, http://eureka-server-2:8083/eureka
 server:
   port: 8082 # 服务端口号
 spring:
   application:
     name: service-client # 服务名
+
+management: # actuator
+  server:
+    port: 8082
+  endpoints:
+    web:
+      base-path: /    # 默认路径为 /actuator
+      exposure:
+        include: refresh,health,info
+#       include: "*"    # 打开全部服务权限

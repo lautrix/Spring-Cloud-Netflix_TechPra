@@ -10,5 +10,5 @@ eureka:
 #      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
        defaultZone: http://eureka-server-2:8083/eureka
   server:
-    enable-self-preservation: false # 设为false，关闭自我保护
+    enable-self-preservation: false # 设为false，关闭自我保护，防止由于eureka的机制导致 client 被错误显示在线，在开发环境使用
     eviction-interval-timer-in-ms: 4000 # 清理间隔（单位毫秒，默认是60*1000）
