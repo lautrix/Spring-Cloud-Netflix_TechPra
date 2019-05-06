@@ -3,7 +3,7 @@ eureka:
     serviceUrl:
       defaultZone: http://eureka-server-1:8080/eureka/, http://eureka-server-2:8083/eureka/  #Eureka Server服务注册
 server:
-  port: 8090
+  port: 8090 #当前服务注册端口号
 
 spring:
   cloud:
@@ -12,7 +12,7 @@ spring:
         git:
           uri: https://github.com/lautrix/Spring-Cloud-Netflix_TechPra.git # 配置文件远程服务器地址
           searchPaths: ConfigFiles  # 配置文件相对路径
-          label: master
+          label: master # 分支
 #          username: repo_username   # 当远程服务器为私有库时才需要填写
 #          password: repo_password
           force-pull: true

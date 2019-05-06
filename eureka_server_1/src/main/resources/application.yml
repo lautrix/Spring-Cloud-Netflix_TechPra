@@ -1,14 +1,14 @@
 server:
-  port: 8083  # \u5F53\u524Deureka server \u670D\u52A1\u7684\u7AEF\u53E3\u53F7\u4E3A8080
+  port: 8083  # 当前eureka server 服务的端口号为8080
 eureka:
   instance:
-    hostname: eureka-server-2 # \u5F53\u524Deureka \u7684hostname \u4E3A eureka-server-2
+    hostname: eureka-server-2 # 当前eureka 的hostname 为 eureka-server-1
   client:
-    register-with-eureka: false # \u5F53\u524D\u670D\u52A1\u4E0D\u9700\u8981\u5230eureka server\u4E0A\u6CE8\u518C\u4E3A\u5BA2\u6237\u7AEF
-    fetch-registry: false #\u4E0D\u8FDB\u884C\u670D\u52A1\u68C0\u7D22
-    serviceUrl: # eureka\u670D\u52A1\u5730\u5740
+    register-with-eureka: false #当前服务不需要到eureka server上注册为客户端
+    fetch-registry: false #不进行服务检索
+    serviceUrl: # eureka服务地址
 #      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
        defaultZone: http://eureka-server-1:8080/eureka
   server:
-    enable-self-preservation: false # \u8BBE\u4E3Afalse\uFF0C\u5173\u95ED\u81EA\u6211\u4FDD\u62A4
-    eviction-interval-timer-in-ms: 4000 # \u6E05\u7406\u95F4\u9694\uFF08\u5355\u4F4D\u6BEB\u79D2\uFF0C\u9ED8\u8BA4\u662F60*1000\uFF09
+    enable-self-preservation: false # 设为false，关闭自我保护，防止由于eureka的机制导致 client 被错误显示在线，在开发环境使用
+    eviction-interval-timer-in-ms: 4000 # 清理间隔（单位毫秒，默认是60*1000）
