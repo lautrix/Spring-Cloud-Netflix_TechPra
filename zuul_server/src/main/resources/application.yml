@@ -1,0 +1,18 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server-1:8061/eureka, http://eureka-server-2:8062/eureka # 注册Eureka server
+server:
+  port: 8071
+spring:
+  application:
+    name: server-zuul
+zuul:
+  routes:
+    ribbon:
+      path: /api-ribbon/**
+      serviceId: server-ribbon
+    feign:
+      path: /api-feign/**
+      serviceId: server-feign
+  ignored-services: '*'

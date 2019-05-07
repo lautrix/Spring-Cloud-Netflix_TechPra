@@ -1,0 +1,19 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://eureka-server-1:8061/eureka, http://eureka-server-2:8062/eureka # 注册Eureka server
+
+server:
+  port: 8091 #当前服务端口号
+
+spring:
+  application:
+    name: server-ribbon #服务名，在eureka注册中心以大写形式展示
+
+management:
+  security: false
+  endpoints:
+    web:
+      exposure:
+        include: hystrix.stream #开启hystrix.stream访问权限
+      base-path: /

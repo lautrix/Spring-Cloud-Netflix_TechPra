@@ -1,0 +1,19 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka-server-1:8061/eureka, http://eureka-server-2:8062/eureka # 注册Eureka server
+server:
+  port: 8082 # 服务端口号
+spring:
+  application:
+    name: service-demo # 服务名
+
+management: # actuator
+  server:
+    port: 8082
+  endpoints:
+    web:
+      base-path: /    # 默认路径为 /actuator
+      exposure:
+        include: refresh,health,info
+#       include: "*"    # 打开全部服务权限
