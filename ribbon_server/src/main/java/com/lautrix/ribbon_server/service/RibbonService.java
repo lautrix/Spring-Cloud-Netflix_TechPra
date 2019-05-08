@@ -19,8 +19,7 @@ public class RibbonService {
         // url中的值不能包含下划线。如：SERVICE-DEMO_1 这种配置非法.但是可以包含连接线-
         String url = URLConstructor.url(DomainConfig.ServiceClient, ApiConfig.GetContent);
         Object object = null;
-        return restTemplate.postForEntity(url,object);
-//        return restTemplate.getForObject(url,String.class);
+        return restTemplate.getForObject(url,String.class);
     }
 
     @HystrixCommand(fallbackMethod = "callFailure")
