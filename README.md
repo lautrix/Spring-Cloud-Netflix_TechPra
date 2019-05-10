@@ -93,4 +93,4 @@
 
 - service_demo：
 
-  ​	HelloWorld！模拟的业务实例。
+  ​	HelloWorld！模拟业务代码。
