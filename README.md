@@ -37,9 +37,13 @@
 
   ​	监控聚合中心。Netflix中使用Hystrix作为服务熔断与故障监控组件，但Hystrix的监控范围仅限于当前工程内，无法做到对多个工程的服务进行同时监控。进而引入Turbine组件，实现监控聚合功能。
 
+  ![监控聚合](https://github.com/lautrix/Spring-Cloud-Netflix_TechPra/blob/master/ConfigFiles/%E7%9B%91%E6%8E%A7%E8%81%9A%E5%90%88.png)
+
 - eureka_server：
 
   ​	服务注册中心。在Netflix框架中，除开作为Eureka注册中心的服务节点之外，其他的服务都将在注册中心中注册。Eureka注册中心通过ServiceID对服务进行分组，开发人员可高度自由的管理服务分组，自由增删同组中服务器节点，操作过程对其他应用透明。注册中心是实现框架中组件高可用的基础组件。
+
+  ![注册中心](https://github.com/lautrix/Spring-Cloud-Netflix_TechPra/blob/master/ConfigFiles/%E6%B3%A8%E5%86%8C%E4%B8%AD%E5%BF%83.png)
 
 - zuul_server：
 
