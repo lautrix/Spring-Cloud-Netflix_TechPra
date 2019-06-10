@@ -1,5 +1,5 @@
 server:
-  port: 8061  # 当前eureka server 服务的端口号为8061
+  port: 18061  # 当前eureka server 服务的端口号为8061
 eureka:
   instance:
     hostname: eureka-server-1 # 当前eureka 的hostname 为 eureka-server-1
@@ -8,7 +8,7 @@ eureka:
     fetch-registry: false #不进行服务检索
     serviceUrl: # eureka服务地址
 #      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
-       defaultZone: http://eureka-server-2:8062/eureka
+       defaultZone: http://eureka-server-2:18062/eureka
   server:
     enable-self-preservation: false # 设为false，关闭自我保护，防止由于eureka的机制导致 client 被错误显示在线，在开发环境使用
     eviction-interval-timer-in-ms: 4000 # 清理间隔（单位毫秒，默认是60*1000）

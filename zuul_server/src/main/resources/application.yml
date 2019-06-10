@@ -1,9 +1,9 @@
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-server-1:8061/eureka, http://eureka-server-2:8062/eureka # 注册Eureka server
+      defaultZone: http://eureka-server-1:18061/eureka, http://eureka-server-2:18062/eureka # 注册Eureka server
 server:
-  port: 8071
+  port: 8080
 spring:
   application:
     name: server-zuul

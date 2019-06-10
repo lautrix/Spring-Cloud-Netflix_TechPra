@@ -2,11 +2,11 @@ spring:
   application:
     name: server-turbine
 server:
-  port: 8051
+  port: 18051
 eureka:
   client:
     service-url:
-      defaultZone: http://eureka-server-1:8061/eureka, http://eureka-server-2:8062/eureka # 注册Eureka server
+      defaultZone: http://eureka-server-1:18061/eureka, http://eureka-server-2:18062/eureka # 注册Eureka server
 turbine:
   combine-host-port: true
   app-config: server-ribbon,server-feign # 配置eureka server中的serverid列表，用来表示监控哪些服务

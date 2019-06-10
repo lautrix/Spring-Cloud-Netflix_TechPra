@@ -6,18 +6,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RefreshScope
+//@RefreshScope
 public class HelloController {
     @RequestMapping("/")
     public String HelloEureka() {
         return "Hello Service_Demo_1!";
     }
 
-    @Value("${iname}")
-    private String name;
+//    @Value("${iname}")
+//    private String name;
 
     @RequestMapping("/config")
     public String config() {
-        return "Service_Demo_1:"+name;
+        String name = "/config";
+        return "Service_Demo_1"+name;
     }
 }
